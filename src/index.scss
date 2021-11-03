@@ -1,0 +1,81 @@
+@import './style/reset';
+@import './style/vars';
+:root {
+    font-size: 18px;
+}
+.App {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+.header {
+    h1 {
+        font-size: 2rem;
+    }
+}
+.main {
+    &__input {
+        #todoInput {
+            border: 1px solid salmon;
+            border-radius: 3px;
+        }
+        .addBtn {
+            border: 1px solid salmon;
+            border-radius: 3px;
+            cursor: pointer;
+            user-select: none;
+            &:active {
+                transform: translateY(.1rem);
+            }
+        }
+    }
+    &__todolist {
+        .todo {
+            display: flex;
+            .checkboxContainer {
+                display: block;
+                position: relative;
+                padding-left: $checkmarkSize;
+                cursor: pointer;
+                user-select: none;
+                input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+                }
+                .checkmark {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: $checkmarkSize;
+                    width: $checkmarkSize;
+                    background-color: #eee;
+                    border-radius: 3px;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        display: none;
+                        left: -5%;
+                        top: 50%;
+                        width: 35%;
+                        height: 70%;
+                        border: solid white;
+                        border-width: 0 3px 3px 0;
+                        transform: rotate(45deg) translateY(-80%);
+                    }
+                }
+                input:checked ~ .checkmark {
+                    background-color: #2196F3;
+                }
+                input:checked ~ .checkmark:after {
+                    display: block;
+                }
+                &:hover .checkmark{
+                    background-color: #ccc;
+                }
+            }
+        }
+    }
+}
