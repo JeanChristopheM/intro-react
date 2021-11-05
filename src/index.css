@@ -41,9 +41,7 @@ textarea {
 }
 
 .App {
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
+  max-width: 375px;
   margin: 0 auto;
   border: 1px solid black;
   padding: 1rem;
@@ -69,6 +67,7 @@ textarea {
   border: 1px solid black;
   border-radius: 3px;
   text-indent: .3rem;
+  width: 100%;
 }
 
 .main__input .addBtn {
@@ -80,6 +79,11 @@ textarea {
       -ms-user-select: none;
           user-select: none;
   padding: .3rem;
+}
+
+.main__input .addBtn:hover {
+  background-color: black;
+  color: white;
 }
 
 .main__input .addBtn:active {
@@ -99,9 +103,6 @@ textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .main__todolist .todo .checkboxContainer {
@@ -166,6 +167,8 @@ textarea {
   border-radius: 3px;
   position: relative;
   cursor: pointer;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .main__todolist .todo .deleteBtn:hover {
@@ -194,5 +197,30 @@ textarea {
   background-color: white;
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
           transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.footer {
+  padding-block: 1rem;
+  display: -ms-grid;
+  display: grid;
+}
+
+.footer .deleteDone {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: .5rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  cursor: pointer;
+}
+
+.footer .deleteDone:hover {
+  background-color: black;
+  color: white;
+}
+
+.footer .deleteDone:active {
+  -webkit-transform: translateY(0.1rem);
+          transform: translateY(0.1rem);
 }
 /*# sourceMappingURL=index.css.map */

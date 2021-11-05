@@ -4,7 +4,7 @@
     font-size: 18px;
 }
 .App {
-    max-width: max-content;
+    max-width: 375px;
     margin: 0 auto;
     border: 1px solid black;
     padding: 1rem;
@@ -27,6 +27,7 @@
             border: 1px solid black;
             border-radius: 3px;
             text-indent: .3rem;
+            width: 100%;
         }
         .addBtn {
             border: 1px solid black;
@@ -34,6 +35,10 @@
             cursor: pointer;
             user-select: none;
             padding: .3rem;
+            &:hover {
+                background-color: black;
+                color: white;
+            }
             &:active {
                 transform: translateY(.1rem);
             }
@@ -47,7 +52,6 @@
         .todo {
             display: flex;
             justify-content: space-between;
-            align-items: center;
             .checkboxContainer {
                 display: block;
                 position: relative;
@@ -99,6 +103,7 @@
                 border-radius: 3px;
                 position: relative;
                 cursor: pointer;
+                flex-shrink: 0;
                 &:hover {
                     background-color: red;
                 }
@@ -123,6 +128,24 @@
                     transform: translate(-50%, -50%) rotate(-45deg);
                 }
             }
+        }
+    }
+}
+.footer {
+    padding-block: 1rem;
+    display: grid;
+    .deleteDone {
+        border: 1px solid black;
+        border-radius: 3px;
+        padding: .5rem;
+        justify-self: center;
+        cursor: pointer;
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+        &:active {
+            transform: translateY(.1rem);
         }
     }
 }
