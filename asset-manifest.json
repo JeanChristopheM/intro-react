@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/intro-react/static/css/main.8cef4d29.chunk.css",
-    "main.js": "/intro-react/static/js/main.d18c8d87.chunk.js",
-    "main.js.map": "/intro-react/static/js/main.d18c8d87.chunk.js.map",
+    "main.css": "/intro-react/static/css/main.9cfdade7.chunk.css",
+    "main.js": "/intro-react/static/js/main.7f416ed4.chunk.js",
+    "main.js.map": "/intro-react/static/js/main.7f416ed4.chunk.js.map",
     "runtime-main.js": "/intro-react/static/js/runtime-main.183c3f8e.js",
     "runtime-main.js.map": "/intro-react/static/js/runtime-main.183c3f8e.js.map",
-    "static/js/2.4048c3ee.chunk.js": "/intro-react/static/js/2.4048c3ee.chunk.js",
-    "static/js/2.4048c3ee.chunk.js.map": "/intro-react/static/js/2.4048c3ee.chunk.js.map",
+    "static/js/2.c31da313.chunk.js": "/intro-react/static/js/2.c31da313.chunk.js",
+    "static/js/2.c31da313.chunk.js.map": "/intro-react/static/js/2.c31da313.chunk.js.map",
     "index.html": "/intro-react/index.html",
-    "static/css/main.8cef4d29.chunk.css.map": "/intro-react/static/css/main.8cef4d29.chunk.css.map",
-    "static/js/2.4048c3ee.chunk.js.LICENSE.txt": "/intro-react/static/js/2.4048c3ee.chunk.js.LICENSE.txt"
+    "static/css/main.9cfdade7.chunk.css.map": "/intro-react/static/css/main.9cfdade7.chunk.css.map",
+    "static/js/2.c31da313.chunk.js.LICENSE.txt": "/intro-react/static/js/2.c31da313.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.183c3f8e.js",
-    "static/js/2.4048c3ee.chunk.js",
-    "static/css/main.8cef4d29.chunk.css",
-    "static/js/main.d18c8d87.chunk.js"
+    "static/js/2.c31da313.chunk.js",
+    "static/css/main.9cfdade7.chunk.css",
+    "static/js/main.7f416ed4.chunk.js"
   ]
 }
