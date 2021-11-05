@@ -5,6 +5,7 @@ The goal is to learn the React library and improve my javascript skills.
 
 The current functionnalities are
 
+    - Persistent data through localStorage
     - Adding a todo
     - Checking the todo
     - Deleting a todo
