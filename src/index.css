@@ -41,28 +41,45 @@ textarea {
 }
 
 .App {
-  max-width: 1200px;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
   margin: 0 auto;
   border: 1px solid black;
+  padding: 1rem;
 }
 
 .header h1 {
   font-size: 2rem;
+  text-align: center;
+  padding-block: 1rem;
+  border-bottom: 3px double black;
+}
+
+.main__input {
+  padding-block: 1rem;
+  border-bottom: 3px double black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .5rem;
 }
 
 .main__input #todoInput {
-  border: 1px solid salmon;
+  border: 1px solid black;
   border-radius: 3px;
+  text-indent: .3rem;
 }
 
 .main__input .addBtn {
-  border: 1px solid salmon;
+  border: 1px solid black;
   border-radius: 3px;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  padding: .3rem;
 }
 
 .main__input .addBtn:active {
@@ -70,16 +87,27 @@ textarea {
           transform: translateY(0.1rem);
 }
 
+.main__todolist h3 {
+  text-decoration: underline;
+  padding-block: 1rem;
+}
+
 .main__todolist .todo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main__todolist .todo .checkboxContainer {
   display: block;
   position: relative;
-  padding-left: 18px;
+  padding-left: 28px;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -101,7 +129,7 @@ textarea {
   left: 0;
   height: 18px;
   width: 18px;
-  background-color: #eee;
+  background-color: #ccc;
   border-radius: 3px;
 }
 
@@ -128,6 +156,43 @@ textarea {
 }
 
 .main__todolist .todo .checkboxContainer:hover .checkmark {
-  background-color: #ccc;
+  background-color: #aaa;
+}
+
+.main__todolist .todo .deleteBtn {
+  width: 18px;
+  height: 18px;
+  background-color: salmon;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+}
+
+.main__todolist .todo .deleteBtn:hover {
+  background-color: red;
+}
+
+.main__todolist .todo .deleteBtn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 80%;
+  width: 3px;
+  background-color: white;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.main__todolist .todo .deleteBtn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 80%;
+  width: 3px;
+  background-color: white;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
 }
 /*# sourceMappingURL=index.css.map */

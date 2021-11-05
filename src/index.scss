@@ -4,38 +4,54 @@
     font-size: 18px;
 }
 .App {
-    max-width: 1200px;
+    max-width: max-content;
     margin: 0 auto;
     border: 1px solid black;
+    padding: 1rem;
 }
 .header {
     h1 {
         font-size: 2rem;
+        text-align: center;
+        padding-block: 1rem;
+        border-bottom: 3px double black;
     }
 }
 .main {
     &__input {
+        padding-block: 1rem;
+        border-bottom: 3px double black;
+        display: flex;
+        gap: .5rem;
         #todoInput {
-            border: 1px solid salmon;
+            border: 1px solid black;
             border-radius: 3px;
+            text-indent: .3rem;
         }
         .addBtn {
-            border: 1px solid salmon;
+            border: 1px solid black;
             border-radius: 3px;
             cursor: pointer;
             user-select: none;
+            padding: .3rem;
             &:active {
                 transform: translateY(.1rem);
             }
         }
     }
     &__todolist {
+        h3 {
+            text-decoration: underline;
+            padding-block: 1rem;
+        }
         .todo {
             display: flex;
+            justify-content: space-between;
+            align-items: center;
             .checkboxContainer {
                 display: block;
                 position: relative;
-                padding-left: $checkmarkSize;
+                padding-left: $checkmarkSize + 10px;
                 cursor: pointer;
                 user-select: none;
                 input {
@@ -51,7 +67,7 @@
                     left: 0;
                     height: $checkmarkSize;
                     width: $checkmarkSize;
-                    background-color: #eee;
+                    background-color: #ccc;
                     border-radius: 3px;
                     &::after {
                         content: "";
@@ -73,7 +89,38 @@
                     display: block;
                 }
                 &:hover .checkmark{
-                    background-color: #ccc;
+                    background-color: #aaa;
+                }
+            }
+            .deleteBtn {
+                width: $checkmarkSize;
+                height: $checkmarkSize;
+                background-color: salmon;
+                border-radius: 3px;
+                position: relative;
+                cursor: pointer;
+                &:hover {
+                    background-color: red;
+                }
+                &::before {
+                    content:'';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    height: 80%;
+                    width: 3px;
+                    background-color: white;
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+                &::after {
+                    content:'';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    height: 80%;
+                    width: 3px;
+                    background-color: white;
+                    transform: translate(-50%, -50%) rotate(-45deg);
                 }
             }
         }
