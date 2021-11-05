@@ -1,16 +1,16 @@
 import React, { useRef} from 'react';
 
-const Input = ({handleAdd, onInputChange}) => {
+const Input = ({handleAdd}) => {
     const inputRef = useRef();
-    const clickHandler = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         const inputElement = inputRef.current;
         handleAdd(inputElement.value);
         inputElement.value = '';
     }
     return (
-        <form className={"main__input"} onSubmit={clickHandler}>
-            <input type="text" name="todoInput" id="todoInput" placeholder="Enter task here" ref={inputRef} onChange={onInputChange} />
+        <form className={"main__input"} onSubmit={handleSubmit}>
+            <input type="text" name="todoInput" id="todoInput" placeholder="Enter task here" ref={inputRef} />
             <button className={"addBtn"} type="submit">Add todo</button>
         </form>
     );
